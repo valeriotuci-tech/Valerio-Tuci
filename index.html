@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Valerio Tuci</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      :root {
+        --ivory: #faf8f3;
+        --charcoal: #2c2c2c;
+        --gold: #c9a961;
+        --burgundy: #6b2737;
+        --olive: #5a6650;
+      }
+      
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+      
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, var(--ivory) 0%, #f0ebe0 100%);
+        font-family: 'Montserrat', sans-serif;
+        color: var(--charcoal);
+        position: relative;
+        overflow: hidden;
+      }
+      
+      body::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 80%;
+        height: 150%;
+        background: radial-gradient(circle, rgba(201, 169, 97, 0.08) 0%, transparent 70%);
+        pointer-events: none;
+      }
+      
+      body::after {
+        content: '';
+        position: absolute;
+        bottom: -30%;
+        left: -15%;
+        width: 60%;
+        height: 100%;
+        background: radial-gradient(circle, rgba(107, 39, 55, 0.05) 0%, transparent 70%);
+        pointer-events: none;
+      }
+      
+      .container {
+        position: relative;
+        text-align: center;
+        padding: 4rem 5rem;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(201, 169, 97, 0.2);
+        box-shadow: 
+          0 20px 60px rgba(0, 0, 0, 0.08),
+          0 0 1px rgba(201, 169, 97, 0.3);
+        max-width: 600px;
+        position: relative;
+      }
+      
+      .container::before,
+      .container::after {
+        content: '';
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border: 2px solid var(--gold);
+      }
+      
+      .container::before {
+        top: 20px;
+        left: 20px;
+        border-right: none;
+        border-bottom: none;
+      }
+      
+      .container::after {
+        bottom: 20px;
+        right: 20px;
+        border-left: none;
+        border-top: none;
+      }
+      
+      .ornament {
+        width: 80px;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        margin: 0 auto 2rem;
+        position: relative;
+      }
+      
+      .ornament::before {
+        content: '◆';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: var(--gold);
+        font-size: 0.6rem;
+        background: var(--ivory);
+        padding: 0 8px;
+      }
+      
+      h1 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 4rem;
+        font-weight: 300;
+        letter-spacing: 0.05em;
+        color: var(--charcoal);
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+      }
+      
+      h1 .surname {
+        display: block;
+        font-weight: 600;
+        color: var(--burgundy);
+        margin-top: 0.3rem;
+      }
+      
+      .subtitle {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 300;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--olive);
+        margin-bottom: 2rem;
+      }
+      
+      .divider {
+        width: 120px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        margin: 2rem auto;
+      }
+      
+      p {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.15rem;
+        font-style: italic;
+        font-weight: 300;
+        color: var(--charcoal);
+        opacity: 0.85;
+        line-height: 1.8;
+      }
+      
+      @media (max-width: 768px) {
+        .container {
+          padding: 3rem 2.5rem;
+          margin: 1rem;
+        }
+        
+        h1 {
+          font-size: 3rem;
+        }
+        
+        .container::before,
+        .container::after {
+          width: 40px;
+          height: 40px;
+        }
+        
+        .container::before {
+          top: 15px;
+          left: 15px;
+        }
+        
+        .container::after {
+          bottom: 15px;
+          right: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <div class="ornament"></div>
+      <h1>
+        Valerio
+        <span class="surname">Tuci</span>
+      </h1>
+      <div class="subtitle">Benvenuto</div>
+      <div class="divider"></div>
+      <p>Eleganza e raffinatezza italiana</p>
+    </main>
+  </body>
+</html>
